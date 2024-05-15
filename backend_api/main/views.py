@@ -15,3 +15,11 @@ class VendorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Vendor.objects.all()
     serializer_class = serilizers.VendorDetailSerializer
     # permission_classes=[permissions.IsAuthenticated]
+
+class ProductList(generics.ListCreateAPIView):
+    queryset = models.Product.objects.all()
+    serializer_class = serilizers.ProductListSerializer
+
+class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Product.objects.all()
+    serializer_class = serilizers.ProductDetailSerializer
