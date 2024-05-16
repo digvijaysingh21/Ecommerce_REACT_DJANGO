@@ -5,7 +5,9 @@ from rest_framework_simplejwt import views as jwt_views
 
 # http post http://127.0.0.1:8000/api/token/ username=admin password=admin
 '''
-http post http://127.0.0.1:8000/api/vendors/ "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1Nzc2NTk2LCJpYXQiOjE3MTU3NzYyOTYsImp0aSI6IjA1MGNjZmU0Mzc1MjQ0NDU5MDhjYWE4ZWYyZGM3Y2Q2IiwidXNlcl9pZCI6MX0.fM0ly9KTOIuC5dOQjmFbPwMBi1kDqJt-2Lc46_-t_vc"
+http  http://127.0.0.1:8000/api/vendors/ "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1Nzc2NTk2LCJpYXQiOjE3MTU3NzYyOTYsImp0aSI6IjA1MGNjZmU0Mzc1MjQ0NDU5MDhjYWE4ZWYyZGM3Y2Q2IiwidXNlcl9pZCI6MX0.fM0ly9KTOIuC5dOQjmFbPwMBi1kDqJt-2Lc46_-t_vc"
+
+http  http://127.0.0.1:8000/api/vendors/refresh/ refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1Nzc2NTk2LCJpYXQiOjE3MTU3NzYyOTYsImp0aSI6IjA1MGNjZmU0Mzc1MjQ0NDU5MDhjYWE4ZWYyZGM3Y2Q2IiwidXNlcl9pZCI6MX0.fM0ly9KTOIuC5dOQjmFbPwMBi1kDqJt-2Lc46_-t_vc"
 
 '''
 

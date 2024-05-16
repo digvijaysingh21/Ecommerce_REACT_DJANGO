@@ -34,11 +34,25 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
 class CustomerList(generics.ListCreateAPIView):
     queryset = models.Customer.objects.all()
     serializer_class = serilizers.CustomerSerializer
-    # this is how we create view level permission to add project level simply add in settings.py
-    # permission_classes=[permissions.IsAuthenticated]
+   
 
 # customer detail views
 class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Customer.objects.all()
     serializer_class = serilizers.CustomerDetailSerializer
-    # permission_classes=[permissions.IsAuthenticated]
+
+# Order
+class OrderList(generics.ListCreateAPIView):
+    queryset = models.Order.objects.all()
+    serializer_class = serilizers.OrderSerializer
+
+class OrderDetail(generics.ListAPIView):
+    # queryset = models.OrderItems.objects.all()
+    serializer_class = serilizers.OrderDetailSerializer
+
+    def get_queryset(self):
+        order_id=self.kwargs['pk']
+        order=models.Order.objects.get(id=order_id)
+        order_items=models.OrderItems.objects.filter(order=order)
+        return order_items
+   
