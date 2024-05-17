@@ -126,4 +126,18 @@ REST_FRAMEWORK = {
     # 'DEFAULT_AUTHENTICATION_CLASSES': [
     #     'rest_framework_simplejwt.authentication.JWTAuthentication',
     # ],
+
+    # pagination on project label
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    #   'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    
+    '''
+       pagination on app label 
+       main is here name of the app 
+       pagination is here file name
+       CustomPagination is class name
+    '''
+    
+    'DEFAULT_PAGINATION_CLASS':'main.pagination.CustomPagination',
+    'PAGE_SIZE': 1
 }

@@ -84,5 +84,13 @@ class OrderDetailSerializer(serializers.ModelSerializer):
         super(OrderDetailSerializer,self).__init__(*args,**kwargs)
         self.Meta.depth = 1
 
+# customer address serializer
+class CustomerAddressSerilaizer(serializers.ModelSerializer):
+    class Meta:
+        model=models.CustomerAddress
+        fields=['id','customer','address','default_address']
 
+    def __init__(self, *args, **kwargs):
+        super(CustomerAddressSerilaizer,self).__init__(*args,**kwargs)
+        self.Meta.depth = 1
 
