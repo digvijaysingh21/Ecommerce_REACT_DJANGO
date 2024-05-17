@@ -65,3 +65,8 @@ class CustomerAddressViewSet(viewsets.ModelViewSet):
     queryset=models.CustomerAddress.objects.all()
 
     
+class ProductRatingViewSet(viewsets.ModelViewSet):
+    serializer_class=serilizers.ProductRatingSerilaizer
+    queryset=models.ProductRating.objects.all()
+
+    
